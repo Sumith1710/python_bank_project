@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to sumith Banking Project</h1>
+
+    <!-- Registration & Login -->
+    <div id="auth">
+        <h2>Register / Login</h2>
+        <button onclick="showSignUp()">Sign Up</button>
+        <button onclick="showSignIn()">Sign In</button>
+        
+        <!-- Sign Up Form -->
+        <div id="signUpForm" class="authForm">
+            <h3>Sign Up</h3>
+            <input type="text" id="signupUsername" placeholder="Username"><br>
+            <input type="password" id="signupPassword" placeholder="Password"><br>
+            <input type="text" id="signupName" placeholder="Name"><br>
+            <input type="number" id="signupAge" placeholder="Age"><br>
+            <input type="text" id="signupCity" placeholder="City"><br>
+            <button onclick="signUp()">Create Account</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="signInForm" class="authForm">
+            <h3>Sign In</h3>
+            <input type="text" id="signinUsername" placeholder="Username"><br>
+            <input type="password" id="signinPassword" placeholder="Password"><br>
+            <button onclick="signIn()">Login</button>
+        </div>
+    </div>
+
+    <!-- Banking Services -->
+    <div id="bankingServices" style="display: none;">
+        <h2 id="welcomeUser"></h2>
+        <button onclick="balanceEnquiry()">Balance Enquiry</button>
+        <button onclick="showDeposit()">Cash Deposit</button>
+        <button onclick="showWithdraw()">Cash Withdraw</button>
+        <button onclick="showFundTransfer()">Fund Transfer</button>
+        <button onclick="logout()">Logout</button>
+
+        <div id="depositForm" class="bankingForm">
+            <input type="number" id="depositAmount" placeholder="Amount to Deposit"><br>
+            <button onclick="deposit()">Deposit</button>
+        </div>
+
+        <div id="withdrawForm" class="bankingForm">
+            <input type="number" id="withdrawAmount" placeholder="Amount to Withdraw"><br>
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+
+        <div id="fundTransferForm" class="bankingForm">
+            <input type="number" id="receiverAccount" placeholder="Receiver Account Number"><br>
+            <input type="number" id="transferAmount" placeholder="Amount to Transfer"><br>
+            <button onclick="fundTransfer()">Transfer</button>
+        </div>
+
+        <div id="balanceInfo"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
